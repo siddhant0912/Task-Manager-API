@@ -3,8 +3,8 @@ const sgMail = require('@sendgrid/mail')
 
 sgMail.setApiKey(process.env.API_KEY)
 
-const sendWelcomeEmail = (email, name) => {
-    sgMail.send({
+const sendWelcomeEmail = async(email, name) => {
+    await sgMail.send({
         to: email,
         from: 'siddhantarekar21@gmail.com',
         subject: 'Welcome To Task-Manager',
@@ -12,8 +12,8 @@ const sendWelcomeEmail = (email, name) => {
     })
 }
 
-const sendCancelEmail = (email, name) => {
-    sgMail.send({
+const sendCancelEmail = async(email, name) => {
+    await sgMail.send({
         to: email,
         from: 'Siddhantarekar21@gmail.com',
         subject: 'See You Later',
