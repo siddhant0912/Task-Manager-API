@@ -9,10 +9,7 @@ const router = new express.Router()
 
 
 router.get('', (req, res) => {
-    res.render('index', {
-        title: 'sign up',
-        Author: 'ME'
-    })
+    res.status(200).send()
 })
 
 
